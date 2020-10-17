@@ -557,3 +557,8 @@ sidecars: {}
 ##    command: ['sh', '-c', 'copy themes and plugins from git and push to /bitnami/wordpress/wp-conntent. Should work with extraVolumeMounts and extraVolumes']
 ##
 initContainers: {}
+
+## Set dnsConfig for the pod.
+## ref: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-dns-config
+##
+dnsConfig: {}
