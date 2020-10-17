@@ -272,6 +272,19 @@ Return the MariaDB Secret Name
 {{- end -}}
 
 {{/*
+Return the MariaDB Secret key name
+*/}}
+{{- define "wordpress.databaseSecretKeyName" -}}
+{{- if .Values.mariadb.enabled }}
+    {{- printf "%s" (include "mariadb.fullname" .) -}}
+{{- else if .Values.externalDatabase.existingSecretKey -}}
+    {{- printf "%s" .Values.externalDatabase.existingSecretKey -}}
+{{- else -}}
+    {{- printf "%s-%s" .Release.Name "externaldb" -}}
+{{- end -}}
+{{- end -}}
+
+{{/*
 Return the WordPress Secret Name
 */}}
 {{- define "wordpress.secretName" -}}

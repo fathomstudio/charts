@@ -187,6 +187,7 @@ The following table lists the configurable parameters of the WordPress chart and
 | `externalDatabase.host`                   | Host of the external database                                                         | `localhost`                                                  |
 | `externalDatabase.user`                   | Existing username in the external db                                                  | `bn_wordpress`                                               |
 | `externalDatabase.existingSecret`         | Name of the database existing Secret Object                                           | `nil`                                                        |
+| `externalDatabase.existingSecretKey`      | The name of the password key inside the existing secret                               | `mysql-password`                                             |
 | `externalDatabase.password`               | Password for the above username                                                       | `nil`                                                        |
 | `externalDatabase.database`               | Name of the existing database                                                         | `bitnami_wordpress`                                          |
 | `externalDatabase.port`                   | Database port number                                                                  | `3306`                                                       |
